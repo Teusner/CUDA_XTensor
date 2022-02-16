@@ -2,6 +2,6 @@
 #include <xtensor/xtensor.hpp>
 
 int main(void) {
-    std::cout << "GCC Compiled Program" << std::endl;
+    std::cout << "C++ Compiled Program" << std::endl;
     return 0;
 }
