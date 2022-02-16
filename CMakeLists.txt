@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.20)
 project(cuda_test LANGUAGES CUDA CXX)
 
 # Cuda
@@ -18,3 +18,4 @@ target_include_directories(main_gcc PUBLIC ${xtensor_INCLUDE_DIRS})
 add_executable(main_nvcc main.cu)
 target_link_libraries(main_nvcc PUBLIC xtensor)
 target_include_directories(main_nvcc PUBLIC ${CUDA_INCLUDE_DIRS} ${xtensor_INCLUDE_DIRS})
+set_target_properties(main_nvcc PROPERTIES CUDA_ARCHITECTURES "50")
